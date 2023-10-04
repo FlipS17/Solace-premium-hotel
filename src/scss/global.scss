@@ -1,3 +1,6 @@
+@use 'variables.scss';
+@use 'fonts.scss';
+
 .menu {
 	display: flex;
 	list-style: none;
@@ -5,4 +8,8 @@
 	column-gap: 109px;
 }
 .logo {
+	@include fonts.header-logo;
+	&__strong {
+		color: variables.$primary-color;
+	}
 }

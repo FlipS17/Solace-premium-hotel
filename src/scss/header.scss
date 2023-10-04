@@ -11,12 +11,6 @@
 		justify-content: space-between;
 		padding: 31px 20px 44px;
 	}
-	&__logo {
-		@include fonts.header-logo;
-		&-strong {
-			color: $primary-color;
-		}
-	}
 	&__menu {
 		&-link {
 			@include fonts.text-body-link;
