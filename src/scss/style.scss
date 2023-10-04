@@ -1,8 +1,6 @@
-@import 'normalize.css';
-@import 'variables.scss';
+@import 'base.scss';
 
-#app {
-	width: 100%;
-	max-width: 1460px;
-	margin: 0 auto;
-}
+@import 'fonts.scss';
+@import 'mixins.scss';
+@import 'global.scss';
+@import 'header.scss';

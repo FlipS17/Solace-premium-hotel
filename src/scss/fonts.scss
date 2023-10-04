@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-@use 'variables.scss';
+@import 'variables.scss';
 
 @mixin text-body($font-size, $font-weight, $color) {
 	font-size: $font-size;
 	font-weight: $font-weight;
 	color: $color;
+	font-family: Roboto, sans-serif;
 }
 
 @mixin text-body-link {
-	@include text-body(25px, 500, variables.$title-color);
+	@include text-body(25px, 500, $title-color);
+	text-decoration: none;
+}
+@mixin header-logo {
+	@include text-body(30px, 700, $title-color);
+	text-decoration: none;
 }

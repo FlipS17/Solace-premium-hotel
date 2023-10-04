@@ -3,22 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/src/scss/style.scss" />
 		<title>Solace</title>
 	</head>
 	<body>
 		<div id="app">
-			<header>
-				<div class="header__top">
-					<a href="#" class="logo header__logo"> <span>So</span>lace </a>
-					<nav class="header__nav">
-						<ul class="menu header__menu">
-							<li><a href="#" class="menu__link">Главная страница</a></li>
-							<li><a href="#" class="menu__link">Номера</a></li>
-							<li><a href="#" class="menu__link">Развлечения</a></li>
-							<li><a href="#" class="menu__link">Ресторан</a></li>
-						</ul>
-					</nav>
-				</div>
+			<header class="header">
+				<nav class="header__nav">
+					<a href="#" class="logo header__logo">
+						<span class="header__logo-strong">So</span>lace
+					</a>
+					<ul class="menu header__menu">
+						<li><a href="#" class="header__menu-link">Главная страница</a></li>
+						<li><a href="#" class="header__menu-link">Номера</a></li>
+						<li><a href="#" class="header__menu-link">Развлечения</a></li>
+						<li><a href="#" class="header__menu-link">Ресторан</a></li>
+					</ul>
+				</nav>
 			</header>
 		</div>
 		<script type="module" src="/src/js/main.js"></script>
