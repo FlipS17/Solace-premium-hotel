@@ -5,18 +5,65 @@
 	top: 0;
 	@extend %container;
 	background: $white-color;
+
 	&__nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding: 31px 20px 44px;
 	}
+
+	@media (max-width: $vp-small) {
+	}
+
 	&__menu {
 		&-link {
-			@include fonts.text-body-link;
+			@include text-body-link;
 			transition: 0.3s;
 			&:hover {
 				color: $primary-color;
+			}
+		}
+	}
+	.header__hero {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 20px;
+		&-aside {
+			max-width: 497px;
+			@media (max-width: $vp-large) {
+				max-width: 369px;
+			}
+			@media (max-width: $vp-small) {
+				max-width: 272px;
+			}
+			@media (max-width: $vp-m-small) {
+				max-width: 300px;
+			}
+		}
+		&-title {
+			margin-bottom: 25px;
+			@include header-hero-title;
+			@media (max-width: $vp-small) {
+				margin-bottom: 19px;
+			}
+			&-strong {
+				color: $primary-color;
+			}
+		}
+		&-text {
+			@include header-hero-text;
+			margin-bottom: 47px;
+			@media (max-width: $vp-small) {
+				margin-bottom: 19px;
+			}
+		}
+		&-image {
+			width: 48%;
+			height: 43%;
+			object-fit: cover;
+			@media (max-width: $vp-m-small) {
+				visibility: hidden;
 			}
 		}
 	}
