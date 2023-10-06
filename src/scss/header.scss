@@ -1,22 +1,21 @@
 @use 'fonts.scss';
-
+@use 'burger.scss';
 .header {
-	position: fixed;
-	top: 0;
-	@extend %container;
-	background: $white-color;
-
 	&__nav {
+		position: fixed;
+		top: 0;
+		@extend %container;
+		background: $white-color;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding: 31px 20px 44px;
 	}
 
-	@media (max-width: $vp-small) {
-	}
-
 	&__menu {
+		@media (max-width: $vp-m-small) {
+		}
+
 		&-link {
 			@include text-body-link;
 			transition: 0.3s;
@@ -25,17 +24,19 @@
 			}
 		}
 	}
-	.header__hero {
+	&__hero {
 		display: flex;
 		justify-content: space-between;
 		padding: 0 20px;
 		&-aside {
 			max-width: 497px;
+			margin-top: 95px;
 			@media (max-width: $vp-large) {
 				max-width: 369px;
 			}
 			@media (max-width: $vp-small) {
 				max-width: 272px;
+				margin-top: 100px;
 			}
 			@media (max-width: $vp-m-small) {
 				max-width: 300px;
@@ -46,6 +47,9 @@
 			@include header-hero-title;
 			@media (max-width: $vp-small) {
 				margin-bottom: 19px;
+			}
+			@media (max-width: $vp-m-small) {
+				margin-top: 5px;
 			}
 			&-strong {
 				color: $primary-color;
