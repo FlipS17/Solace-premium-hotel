@@ -10,3 +10,6 @@
 @mixin text-body-link {
 	@include text-body(25px, 500, variables.$title-color);
 }
+@mixin button-text {
+	@include text-body(16px, 500, $white-color, 100%);
+}
