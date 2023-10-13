@@ -1,5 +1,5 @@
+@use '/src/scss/variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-@import 'variables.scss';
 
 @mixin text-body($font-size, $font-weight, $color, $line-height) {
 	font-size: $font-size;
@@ -10,48 +10,48 @@
 }
 
 @mixin text-body-link {
-	@include text-body(25px, 500, $title-color, 100%);
+	@include text-body(25px, 500, variables.$title-color, 100%);
 	text-decoration: none;
-	@media (max-width: $vp-large) {
-		@include text-body(18px, 500, $title-color, 100%);
+	@media (max-width: variables.$vp-large) {
+		@include text-body(18px, 500, variables.$title-color, 100%);
 	}
-	@media (max-width: $vp-small) {
-		@include text-body(18px, 500, $title-color, 100%);
+	@media (max-width: variables.$vp-small) {
+		@include text-body(18px, 500, variables.$title-color, 100%);
 	}
 }
 @mixin header-logo {
-	@include text-body(30px, 700, $title-color, 100%);
+	@include text-body(30px, 700, variables.$title-color, 100%);
 	text-decoration: none;
 }
 @mixin header-hero-title {
-	@include text-body(60px, 700, $title-color, 120%);
+	@include text-body(60px, 700, variables.$title-color, 120%);
 
-	@media (max-width: $vp-large) {
-		@include text-body(48px, 700, $title-color, 120%);
+	@media (max-width: variables.$vp-large) {
+		@include text-body(48px, 700, variables.$title-color, 120%);
 	}
-	@media (max-width: $vp-small) {
-		@include text-body(38px, 700, $title-color, 120%);
+	@media (max-width: variables.$vp-small) {
+		@include text-body(38px, 700, variables.$title-color, 120%);
 	}
-	@media (max-width: $vp-m-small) {
-		@include text-body(48px, 700, $title-color, 120%);
+	@media (max-width: variables.$vp-m-small) {
+		@include text-body(48px, 700, variables.$title-color, 120%);
 	}
 }
 @mixin header-hero-text {
-	@include text-body(30px, 400, $title-color, 160%);
+	@include text-body(30px, 400, variables.$title-color, 160%);
 
-	@media (max-width: $vp-large) {
-		@include text-body(25px, 400, $title-color, 160%);
+	@media (max-width: variables.$vp-large) {
+		@include text-body(25px, 400, variables.$title-color, 160%);
 	}
 
-	@media (max-width: $vp-small) {
-		@include text-body(18px, 400, $title-color, 160%);
+	@media (max-width: variables.$vp-small) {
+		@include text-body(18px, 400, variables.$title-color, 160%);
 	}
 }
 
 @mixin mobile-menu-text {
-	@include text-body(18px, 400, $white-color, 100%);
+	@include text-body(18px, 400, variables.$white-color, 100%);
 }
 
 @mixin button-text {
-	@include text-body(16px, 500, $white-color, 100%);
+	@include text-body(16px, 500, variables.$white-color, 100%);
 }

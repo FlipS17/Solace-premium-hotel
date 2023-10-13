@@ -1,11 +1,13 @@
 @use 'fonts.scss';
 @use 'burger.scss';
+@use 'variables.scss';
+@use 'mixins.scss';
 .header {
 	&__nav {
 		position: fixed;
 		top: 0;
 		@extend %container;
-		background: $white-color;
+		background: variables.$white-color;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -13,14 +15,14 @@
 	}
 
 	&__menu {
-		@media (max-width: $vp-m-small) {
+		@media (max-width: variables.$vp-m-small) {
 		}
 
 		&-link {
 			@include text-body-link;
 			transition: 0.3s;
 			&:hover {
-				color: $primary-color;
+				color: variables.$primary-color;
 			}
 		}
 	}
@@ -31,34 +33,34 @@
 		&-aside {
 			max-width: 497px;
 			margin-top: 95px;
-			@media (max-width: $vp-large) {
+			@media (max-width: variables.$vp-large) {
 				max-width: 369px;
 			}
-			@media (max-width: $vp-small) {
+			@media (max-width: variables.$vp-small) {
 				max-width: 272px;
 				margin-top: 100px;
 			}
-			@media (max-width: $vp-m-small) {
+			@media (max-width: variables.$vp-m-small) {
 				max-width: 300px;
 			}
 		}
 		&-title {
 			margin-bottom: 25px;
 			@include header-hero-title;
-			@media (max-width: $vp-small) {
+			@media (max-width: variables.$vp-small) {
 				margin-bottom: 19px;
 			}
-			@media (max-width: $vp-m-small) {
+			@media (max-width: variables.$vp-m-small) {
 				margin-top: 5px;
 			}
 			&-strong {
-				color: $primary-color;
+				color: variables.$primary-color;
 			}
 		}
 		&-text {
 			@include header-hero-text;
 			margin-bottom: 47px;
-			@media (max-width: $vp-small) {
+			@media (max-width: variables.$vp-small) {
 				margin-bottom: 19px;
 			}
 		}
@@ -66,9 +68,12 @@
 			width: 48%;
 			height: 43%;
 			object-fit: cover;
-			@media (max-width: $vp-m-small) {
+			@media (max-width: variables.$vp-m-small) {
 				visibility: hidden;
 			}
+		}
+		&-button {
+			@include buttons;
 		}
 	}
 }
