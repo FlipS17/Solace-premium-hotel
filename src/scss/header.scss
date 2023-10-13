@@ -1,0 +1,79 @@
+@use 'fonts.scss';
+@use 'burger.scss';
+@use 'variables.scss';
+@use 'mixins.scss';
+.header {
+	&__nav {
+		position: fixed;
+		top: 0;
+		@extend %container;
+		background: variables.$white-color;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 31px 20px 44px;
+	}
+
+	&__menu {
+		@media (max-width: variables.$vp-m-small) {
+		}
+
+		&-link {
+			@include text-body-link;
+			transition: 0.3s;
+			&:hover {
+				color: variables.$primary-color;
+			}
+		}
+	}
+	&__hero {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 20px;
+		&-aside {
+			max-width: 497px;
+			margin-top: 95px;
+			@media (max-width: variables.$vp-large) {
+				max-width: 369px;
+			}
+			@media (max-width: variables.$vp-small) {
+				max-width: 272px;
+				margin-top: 100px;
+			}
+			@media (max-width: variables.$vp-m-small) {
+				max-width: 300px;
+			}
+		}
+		&-title {
+			margin-bottom: 25px;
+			@include header-hero-title;
+			@media (max-width: variables.$vp-small) {
+				margin-bottom: 19px;
+			}
+			@media (max-width: variables.$vp-m-small) {
+				margin-top: 5px;
+			}
+			&-strong {
+				color: variables.$primary-color;
+			}
+		}
+		&-text {
+			@include header-hero-text;
+			margin-bottom: 47px;
+			@media (max-width: variables.$vp-small) {
+				margin-bottom: 19px;
+			}
+		}
+		&-image {
+			width: 48%;
+			height: 43%;
+			object-fit: cover;
+			@media (max-width: variables.$vp-m-small) {
+				visibility: hidden;
+			}
+		}
+		&-button {
+			@include buttons;
+		}
+	}
+}

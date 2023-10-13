@@ -1,0 +1,18 @@
+@use 'variables.scss';
+@use 'fonts.scss';
+
+.menu {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	column-gap: 109px;
+	@media (max-width: variables.$vp-large) {
+		column-gap: 17px;
+	}
+}
+.logo {
+	@include header-logo;
+	&__strong {
+		color: variables.$primary-color;
+	}
+}
