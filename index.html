@@ -6,7 +6,44 @@
 		<title>Solace</title>
 	</head>
 	<body>
-		<div id="app"></div>
+		<section class="rooms">
+			<h1 class="rooms__title">Номера</h1>
+			<div class="rooms__cards-container">
+				<div class="rooms__card">
+					<img
+						class="rooms__card-image"
+						src="./src/assets/images/standart-room.png"
+						alt=""
+					/>
+					<div class="rooms__card-description">
+						<div class="rooms__card-info">
+							<div class="room__card-about">
+								<p class="rooms__card-name-room">Standart</p>
+								<p class="rooms__card-cost">3 800 ₽</p>
+							</div>
+							<div class="room__card-area">
+								<img
+									class="room__card-area-image"
+									src="./src/assets/icons/area-icon.png"
+									alt=""
+								/>
+								<p class="room__card-area-amount">18 m²</p>
+							</div>
+						</div>
+
+						<div class="rooms_card-statistic">
+							<div class="rooms_card-statistic-amount">
+								<img class="rooms__card-statistic-image" src="" alt="" />
+								<p class="rooms__card-statistic-mark">4.5 /5</p>
+							</div>
+							<a href="#" class="button rooms__card-statistic-button"
+								>Подробнее</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<script type="module" src="/src/js/main.js"></script>
 	</body>
 </html>

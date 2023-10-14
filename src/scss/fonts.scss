@@ -10,3 +10,12 @@
 @mixin text-body-link {
 	@include text-body(25px, 500, variables.$title-color);
 }
+@mixin section-title {
+	@include text-body(38px, 700, variables.$title-color, 100%);
+}
+@mixin room-card-text {
+	@include text-body(18px, 400, variables.$card-text, 166%);
+}
+@mixin button-text {
+	@include text-body(16px, 500, variables.$white-color, 100%);
+}
