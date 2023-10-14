@@ -1,3 +1,5 @@
+@use '/src/scss/variables.scss';
+
 .advantages {
 	&__title {
 		text-align: center;
@@ -11,15 +13,24 @@
 		row-gap: 30px;
 		justify-content: center;
 		padding: 0 20px;
+
+		// @media (max-width: $vp-medium) {
+		// 	margin: 20px auto;
+		// 	max-width: 80%;
+		// 	flex-wrap: nowrap;
+		// 	justify-content: left;
+		// 	overflow-x: scroll;
+		// }
 	}
 	&__card {
 		width: 444px;
 		transition: 0.4s;
 		padding: 50px 40px 102px;
 		border: 1px solid transparent;
-		@media (max-width: $vp-f-small) {
+		@media (max-width: variables.$vp-medium) {
 			padding: 20px 20px 50px;
 		}
+
 		&-top {
 			display: flex;
 			align-items: center;
@@ -28,26 +39,20 @@
 		}
 		&-image {
 			padding: 8px;
-			background: $primary-color;
+			background: variables.$primary-color;
 			margin-right: 36px;
 		}
 		&-title {
 			@include card-title;
 			text-align: left;
-			@media (max-width: $vp-m-mobile) {
-				font-size: 18px;
-			}
 		}
 		&-text {
 			@include card-text;
-			@media (max-width: $vp-m-mobile) {
-				font-size: 18px;
-			}
 		}
 	}
 	&__card:hover {
-		box-shadow: 0px 25px 45px 0px $card-shadow;
-		border: 1px solid $primary-color;
+		box-shadow: 0px 25px 45px 0px variables.$card-shadow;
+		border: 1px solid variables.$primary-color;
 		transition: 0.4s;
 	}
 }
