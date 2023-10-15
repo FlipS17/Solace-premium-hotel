@@ -1,35 +1,74 @@
+@use '/src/scss/fonts.scss';
+@use '/src/scss/variables.scss';
+@use '/src/scss/mixins.scss';
 .rooms {
 	&__title {
+		@include fonts.section-title;
+		margin-bottom: 60px;
+		text-align: center;
+		padding: 0 20px;
 	}
 	&__cards-container {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 30px;
+		row-gap: 30px;
+		justify-content: center;
 	}
 	&__card {
 		&-image {
+			margin-bottom: 17px;
 		}
 		&-description {
+			@include mixins.description-area;
 		}
 		&-info {
 		}
 		&-about {
+			width: 162px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text-align: center;
+			margin-bottom: 19px;
 		}
 		&-name-room {
+			@include fonts.room-card-name;
 		}
 		&-cost {
+			@include fonts.room-card-text;
 		}
 		&-area {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text-align: center;
+			width: 79px;
 			&-image {
 			}
 			&-amount {
+				@include fonts.room-card-text;
 			}
 		}
 		&-statistic {
 			&-amount {
+				display: flex;
+				justify-content: space-between;
+				width: 169px;
+				align-items: center;
+				margin-bottom: 24px;
 			}
+
 			&-image {
 			}
 			&-mark {
+				@include fonts.room-card-text;
 			}
 			&-button {
+				@include mixins.buttons;
+				font-size: 14px;
+				padding: 10px 20px;
+				float: right;
 			}
 		}
 	}

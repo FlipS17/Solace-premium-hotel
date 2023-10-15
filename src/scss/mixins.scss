@@ -1,5 +1,9 @@
 @use 'variables.scss';
 @use 'fonts.scss';
+%container {
+	max-width: 1500px;
+	width: 100%;
+}
 
 @mixin buttons {
 	color: variables.$white-color;
@@ -19,4 +23,11 @@
 	&::before {
 		transition: 0.5s ease;
 	}
+}
+@mixin description-area {
+	background-color: rgba(variables.$descriprion-area, 0.4);
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 23px 10px;
+	border-radius: 10px;
 }

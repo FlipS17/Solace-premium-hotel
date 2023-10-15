@@ -3,47 +3,130 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./src/scss/style.scss" />
 		<title>Solace</title>
 	</head>
 	<body>
-		<section class="rooms">
-			<h1 class="rooms__title">Номера</h1>
-			<div class="rooms__cards-container">
-				<div class="rooms__card">
-					<img
-						class="rooms__card-image"
-						src="./src/assets/images/standart-room.png"
-						alt=""
-					/>
-					<div class="rooms__card-description">
-						<div class="rooms__card-info">
-							<div class="room__card-about">
-								<p class="rooms__card-name-room">Standart</p>
-								<p class="rooms__card-cost">3 800 ₽</p>
+		<div id="app">
+			<section class="rooms">
+				<h2 class="rooms__title">Номера</h2>
+				<div class="rooms__cards-container">
+					<div class="rooms__card">
+						<img
+							class="rooms__card-image"
+							src="./src/assets/images/standart-room.png"
+							alt=""
+						/>
+						<div class="rooms__card-description">
+							<div class="rooms__card-info">
+								<div class="rooms__card-about">
+									<p class="rooms__card-name-room">Standart</p>
+									<p class="rooms__card-cost">3 800 ₽</p>
+								</div>
+								<div class="rooms__card-area">
+									<img
+										class="rooms__card-area-image"
+										src="./src/assets/icons/area-icon.png"
+										alt=""
+									/>
+									<p class="rooms__card-area-amount">18 m²</p>
+								</div>
 							</div>
-							<div class="room__card-area">
-								<img
-									class="room__card-area-image"
-									src="./src/assets/icons/area-icon.png"
-									alt=""
-								/>
-								<p class="room__card-area-amount">18 m²</p>
+
+							<div class="rooms__card-statistic">
+								<div class="rooms__card-statistic-amount">
+									<img
+										class="rooms__card-statistic-image"
+										src="./src/assets/icons/4stars.png"
+										alt=""
+									/>
+									<p class="rooms__card-statistic-mark">4/5</p>
+								</div>
+								<a href="#" class="button rooms__card-statistic-button"
+									>Подробнее</a
+								>
 							</div>
 						</div>
+					</div>
 
-						<div class="rooms_card-statistic">
-							<div class="rooms_card-statistic-amount">
-								<img class="rooms__card-statistic-image" src="" alt="" />
-								<p class="rooms__card-statistic-mark">4.5 /5</p>
+					<div class="rooms__card">
+						<img
+							class="rooms__card-image"
+							src="./src/assets/images/super-room.png"
+							alt=""
+						/>
+						<div class="rooms__card-description">
+							<div class="rooms__card-info">
+								<div class="rooms__card-about">
+									<p class="rooms__card-name-room">Super</p>
+									<p class="rooms__card-cost">5 400 ₽</p>
+								</div>
+								<div class="rooms__card-area">
+									<img
+										class="rooms__card-area-image"
+										src="./src/assets/icons/area-icon.png"
+										alt=""
+									/>
+									<p class="rooms__card-area-amount">24 m²</p>
+								</div>
 							</div>
-							<a href="#" class="button rooms__card-statistic-button"
-								>Подробнее</a
-							>
+
+							<div class="rooms__card-statistic">
+								<div class="rooms__card-statistic-amount">
+									<img
+										class="rooms__card-statistic-image"
+										src="./src/assets/icons/4.5stars.png"
+										alt=""
+									/>
+									<p class="rooms__card-statistic-mark">4.5/5</p>
+								</div>
+								<a href="#" class="button rooms__card-statistic-button"
+									>Подробнее</a
+								>
+							</div>
+						</div>
+					</div>
+
+					<div class="rooms__card">
+						<img
+							class="rooms__card-image"
+							src="./src/assets/images/family-room.png"
+							alt=""
+						/>
+						<div class="rooms__card-description">
+							<div class="rooms__card-info">
+								<div class="rooms__card-about">
+									<p class="rooms__card-name-room">Family</p>
+									<p class="rooms__card-cost">6 800 ₽</p>
+								</div>
+								<div class="rooms__card-area">
+									<img
+										class="rooms__card-area-image"
+										src="./src/assets/icons/area-icon.png"
+										alt=""
+									/>
+									<p class="rooms__card-area-amount">34 m²</p>
+								</div>
+							</div>
+
+							<div class="rooms__card-statistic">
+								<div class="rooms__card-statistic-amount">
+									<img
+										class="rooms__card-statistic-image"
+										src="./src/assets/icons/5stars.png"
+										alt=""
+									/>
+									<p class="rooms__card-statistic-mark">5/5</p>
+								</div>
+								<a href="#" class="button rooms__card-statistic-button"
+									>Подробнее</a
+								>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 		<script type="module" src="/src/js/main.js"></script>
 	</body>
 </html>
