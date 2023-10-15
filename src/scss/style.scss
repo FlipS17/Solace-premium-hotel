@@ -1,5 +1,7 @@
-@import 'normalize.css';
-@import 'variables.scss';
+@import 'base.scss';
+@import 'fonts.scss';
+@import 'sections-entertainment.scss';
+@import 'mixins.scss';
 
 #app {
 	width: 100%;

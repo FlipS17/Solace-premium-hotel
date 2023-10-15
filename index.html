@@ -6,7 +6,41 @@
 		<title>Solace</title>
 	</head>
 	<body>
-		<div id="app"></div>
+		<div id="app">
+			<section class="entertainment">
+				<h2 class="entertainment__title">Развлечения</h2>
+				<div class="entertainment__slider">
+					<button class="prev entertainment__slider-button">
+						<img src="./src/assets/icon/slider-btn.png" alt="" />
+					</button>
+
+					<div class="entertainment__slider-inner">
+						<div class="sff">
+							<img
+								class="entertainment__slider-image"
+								src="./src/assets/images/slider-gym.jpg"
+								alt=""
+							/>
+						</div>
+						<div class="entertainment__slider-info">
+							<p class="entertainment__slider-info-about">
+								Спортивный зал уже включен в стоимость номера
+							</p>
+							<div class="entertainment__slider-info-time">
+								<img src="./src/assets/icon/clock-icon.png" alt="" />
+								<p class="entertainment__slider-info-time-number">
+									6:00 - 22:00
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<button class="next entertainment__slider-button">
+						<img src="./src/assets/icon/slider-btn.png" alt="" />
+					</button>
+				</div>
+			</section>
+		</div>
 		<script type="module" src="/src/js/main.js"></script>
 	</body>
 </html>

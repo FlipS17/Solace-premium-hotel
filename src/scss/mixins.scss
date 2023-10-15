@@ -1,0 +1,12 @@
+@use 'variables.scss';
+@use 'fonts.scss';
+
+%container {
+	max-width: 1500px;
+	width: 100%;
+}
+
+@mixin slider-button {
+	border: none;
+	background: transparent;
+}
