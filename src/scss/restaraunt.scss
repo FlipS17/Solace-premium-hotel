@@ -1,0 +1,39 @@
+@use 'fonts.scss';
+@use 'variables.scss';
+
+.restaraunt {
+	&__subtitle {
+		@include fonts.section-title;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+	&__inner {
+		position: relative;
+		overflow: hidden;
+		&-image {
+		}
+		&-info {
+			max-width: 488px;
+			padding: 65px 85px;
+			background-color: variables.$title-color;
+			border-radius: 14px;
+			position: absolute;
+			bottom: 4px;
+			left: 0;
+			&-about {
+				@include fonts.slider-info-text;
+				color: variables.$white-color;
+				margin-bottom: 24px;
+			}
+			&-time {
+				display: flex;
+				justify-content: space-between;
+				max-width: 317px;
+				&-number {
+					@include fonts.slider-time-number;
+					color: variables.$white-color;
+				}
+			}
+		}
+	}
+}
