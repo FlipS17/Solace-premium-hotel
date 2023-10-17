@@ -1,0 +1,39 @@
+@use 'fonts.scss';
+@use 'variables.scss';
+
+.rotate {
+	rotate: 180deg;
+}
+.colored {
+	color: variables.$primary-color;
+}
+.stock {
+	&__title {
+		@include fonts.section-title;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+	&__slider {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		&-inner {
+			position: relative;
+		}
+		&-info {
+			@include fonts.info-text;
+			max-width: 486px;
+			position: absolute;
+			padding: 65px 51px;
+			background-color: variables.$title-color;
+			border-radius: 14px;
+			bottom: 4px;
+			text-align: left;
+		}
+		&-button {
+			border: none;
+			background-color: transparent;
+		}
+	}
+}

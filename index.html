@@ -6,7 +6,34 @@
 		<title>Solace</title>
 	</head>
 	<body>
-		<div id="app"></div>
+		<div id="app">
+			<section class="stock">
+				<h2 class="stock__title">Акции</h2>
+				<div class="stock__slider">
+					<button class="prev stock__slider-button">
+						<img src="./src/assets/icons/slider-arrow.png" alt="" />
+					</button>
+
+					<div class="stock__slider-inner">
+						<div class="sff">
+							<img
+								class="stock__slider-image"
+								src="./src/assets/images/stock-slider-img.jpg"
+								alt=""
+							/>
+						</div>
+						<p class="stock__slider-info">
+							Скидка в <span class="colored">15%</span> семьям с 2-мя детьми (до
+							14 лет).
+						</p>
+					</div>
+
+					<button class="next stock__slider-button rotate">
+						<img src="./src/assets/icons/slider-arrow.png" alt="" />
+					</button>
+				</div>
+			</section>
+		</div>
 		<script type="module" src="/src/js/main.js"></script>
 	</body>
 </html>
