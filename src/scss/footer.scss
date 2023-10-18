@@ -1,0 +1,54 @@
+@use 'fonts.scss';
+@use 'variables.scss';
+
+.colored {
+	color: $primary-color;
+}
+
+.footer {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__logo {
+		@include fonts.section-title;
+	}
+	&__list {
+		text-align: center;
+		& a {
+			@include fonts.footer-menu;
+			transition: 0.4s;
+		}
+		& a:hover {
+			transition: 0.4s;
+			color: variables.$primary-color;
+		}
+		&-item {
+			margin-bottom: 28px;
+		}
+		&-item:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__socials {
+		&-vk {
+			display: flex;
+			margin-bottom: 53px;
+			align-items: center;
+			text-align: center;
+			&-text {
+				@include fonts.footer-menu;
+				margin-left: 20px;
+			}
+		}
+		&-mail {
+			display: flex;
+			align-items: center;
+			text-align: center;
+			&-text {
+				@include fonts.footer-menu;
+				margin-left: 20px;
+			}
+		}
+	}
+}
