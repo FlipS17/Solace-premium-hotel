@@ -1,0 +1,15 @@
+@use 'variables.scss';
+@use 'fonts.scss';
+
+.menu {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	column-gap: 109px;
+}
+.logo {
+	@include header-logo;
+	&__strong {
+		color: variables.$primary-color;
+	}
+}
