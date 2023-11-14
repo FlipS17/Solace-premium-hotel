@@ -1,26 +1,25 @@
 @use '/src/scss/variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
-@mixin text-body($font-size, $font-weight, $color, $line-height) {
+@mixin text-body($font-size, $font-weight, $color) {
 	font-size: $font-size;
 	font-weight: $font-weight;
 	color: $color;
-	line-height: $line-height;
 	font-family: Roboto, sans-serif;
 }
 
 @mixin text-body-link {
-	@include text-body(25px, 500, variables.$title-color, 100%);
+	@include text-body(25px, 500, variables.$title-color);
 }
 @mixin advantages-title {
-	@include text-body(38px, 700, variables.$title-color, 100%);
+	@include text-body(38px, 700, variables.$title-color);
 }
 @mixin card-title {
-	@include text-body(24px, 400, variables.$title-color, 133%);
+	@include text-body(24px, 400, variables.$title-color);
 }
 @mixin card-text {
-	@include text-body(18px, 400, variables.$card-text, 166%);
+	@include text-body(18px, 400, variables.$card-text);
 }
 @mixin button-text {
-	@include text-body(16px, 500, variables.$white-color, 100%);
+	@include text-body(16px, 500, variables.$white-color);
 }
