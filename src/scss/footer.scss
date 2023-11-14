@@ -9,15 +9,26 @@
 	&__container {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: $vp-m-small) {
+			display: block;
+			margin-bottom: 40px;
+		}
 	}
 	&__logo {
 		@include fonts.section-title;
+		@media (max-width: $vp-m-small) {
+			font-size: 25px;
+			margin-bottom: 40px;
+		}
 	}
 	&__list {
 		text-align: center;
 		& a {
 			@include fonts.footer-menu;
 			transition: 0.4s;
+			@media (max-width: $vp-m-small) {
+				font-size: 16px;
+			}
 		}
 		& a:hover {
 			transition: 0.4s;
@@ -36,9 +47,22 @@
 			margin-bottom: 53px;
 			align-items: center;
 			text-align: center;
+			@media (max-width: $vp-m-small) {
+				margin-bottom: 30px;
+			}
 			&-text {
 				@include fonts.footer-menu;
 				margin-left: 20px;
+				@media (max-width: $vp-m-small) {
+					margin-left: 6px;
+					font-size: 10px;
+				}
+			}
+			&-image {
+				@media (max-width: $vp-m-small) {
+					max-width: 32px;
+					max-height: 27px;
+				}
 			}
 		}
 		&-mail {
@@ -48,6 +72,16 @@
 			&-text {
 				@include fonts.footer-menu;
 				margin-left: 20px;
+				@media (max-width: $vp-m-small) {
+					margin-left: 6px;
+					font-size: 10px;
+				}
+			}
+			&-image {
+				@media (max-width: $vp-m-small) {
+					max-width: 25px;
+					max-height: 23px;
+				}
 			}
 		}
 	}
