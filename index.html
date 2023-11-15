@@ -18,56 +18,81 @@
 						<li><a href="#" class="header__menu-link">Развлечения</a></li>
 						<li><a href="#" class="header__menu-link">Ресторан</a></li>
 					</ul>
+					<div class="header__burger">
+						<span class="header__burger-bar"></span>
+						<span class="header__burger-bar"></span>
+						<span class="header__burger-bar"></span>
+					</div>
+					<nav class="header__nav-mobile">
+						<ul class="header__menu-mobile">
+							<li class="header__menu-mobile-item">
+								<a class="header__menu-mobile-link" href="#"
+									>Главная страница</a
+								>
+							</li>
+							<li class="header__menu-mobile-item">
+								<a class="header__menu-mobile-link" href="#">Номера</a>
+							</li>
+							<li class="header__menu-mobile-item">
+								<a class="header__menu-mobile-link" href="#">Развлечения</a>
+							</li>
+							<li class="header__menu-mobile-item">
+								<a class="header__menu-mobile-link" href="#">Ресторан</a>
+							</li>
+						</ul>
+					</nav>
 				</nav>
 			</header>
 
-			<h2 class="standart__room-subtitle">
-				Номер <span class="logo__strong">Standart</span>
-			</h2>
-
 			<section class="standart__room-style">
-				<img
-					class="standart__room-style-image"
-					src="./src/assets/images/standart.jpg"
-					alt=""
-				/>
-				<div class="standart__room-style-info">
-					<p class="standart__room-style-info-title">
-						Авторский дизайн интерьера в скандинавском стиле
-					</p>
-					<p class="standart__room-style-info-text">
-						Апартаменты категории Standart идеально подойдут для одноместного
-						размещения. Интерьеры выполнены в спокойных тонах, а лаконичный
-						дизайн позволит вместить в малую площадь всё необходимое для
-						комфортной жизни.
-					</p>
-					<div class="standart__room-style-info-area">
-						<img
-							class="standart__room-style-info-area-icon"
-							src="./src/assets/images/area.png"
-							alt=""
-						/>
-						<p class="standart__room-style-info-area-number">18 м²</p>
+				<h2 class="standart__room-subtitle">
+					Номер <span class="logo__strong">Standart</span>
+				</h2>
+
+				<div class="standart__room-style-inner">
+					<img
+						class="standart__room-style-inner-image"
+						src="./src/assets/images/standart.jpg"
+						alt=""
+					/>
+					<div class="standart__room-style-inner-info">
+						<p class="standart__room-style-inner-info-title">
+							Авторский дизайн интерьера в скандинавском стиле
+						</p>
+						<p class="standart__room-style-inner-info-text">
+							Апартаменты категории Standart идеально подойдут для одноместного
+							размещения. Интерьеры выполнены в спокойных тонах, а лаконичный
+							дизайн позволит вместить в малую площадь всё необходимое для
+							комфортной жизни.
+						</p>
+						<div class="standart__room-style-inner-info-area">
+							<img
+								class="standart__room-style-inner-info-area-icon"
+								src="./src/assets/images/area.png"
+								alt=""
+							/>
+							<p class="standart__room-style-inner-info-area-number">18 м²</p>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<section class="standart__room-people">
-				<div class="standart__room-people-info standart__room-style-info">
+				<div class="standart__room-people-info standart__room-style-inner-info">
 					<p
-						class="standart__room-people-info-title standart__room-style-info-title"
+						class="standart__room-people-info-title standart__room-style-inner-info-title"
 					>
 						Тишина и комфорт
 					</p>
 					<p
-						class="standart__room-people-info-text standart__room-style-info-text"
+						class="standart__room-people-info-text standart__room-style-inner-info-text"
 					>
 						В апартаментах установлены шторы блэк-аут, которые будут беречь ваш
 						сон, в апартаментах создана атмосфера уюта и спокойствия для
 						максимально комфортного отдыха.
 					</p>
 					<div
-						class="standart__room-people-info-people standart__room-style-info-area"
+						class="standart__room-people-info-people standart__room-style-inner-info-area"
 					>
 						<img
 							class="standart__room-people-info-people-icon"
@@ -75,7 +100,7 @@
 							alt=""
 						/>
 						<p
-							class="standart__room-people-info-people-number standart__room-style-info-area-number"
+							class="standart__room-people-info-people-number standart__room-style-inner-info-area-number"
 						>
 							1-2 чел.
 						</p>
@@ -89,7 +114,11 @@
 			</section>
 
 			<section class="standart__room-cost">
-				<img src="./src/assets/images/room-cost.jpg" alt="" />
+				<img
+					class="standart__room-cost-image"
+					src="./src/assets/images/room-cost.jpg"
+					alt=""
+				/>
 				<div class="standart__room-cost-info">
 					<p class="standart__room-cost-info-day">3 800 ₽ за сутки</p>
 					<p
@@ -110,7 +139,11 @@
 				<button class="standart__room-slider-left-arrow">
 					<img src="./src/assets/images/btn-right.png" alt="" />
 				</button>
-				<img src="./src/assets/images/room-slider.jpg" alt="" />
+				<img
+					class="standart__room-slider-ff"
+					src="./src/assets/images/room-slider.jpg"
+					alt=""
+				/>
 				<button class="standart__room-slider-right-arrow">
 					<img src="./src/assets/images/btn-right.png" alt="" />
 				</button>
@@ -162,5 +195,6 @@
 			</section>
 		</div>
 		<script type="module" src="/src/js/main.js"></script>
+		<script src="/src/js/burger.js"></script>
 	</body>
 </html>
