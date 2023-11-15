@@ -1,9 +1,9 @@
 @use 'fonts.scss';
 @use 'mixins.scss';
 @use 'variables.scss';
+@use 'burger.scss';
 
 .header {
-	margin-bottom: 170px;
 	&__nav {
 		position: fixed;
 		top: 0;
@@ -17,7 +17,7 @@
 
 	&__menu {
 		&-link {
-			@include fonts.text-body-link;
+			@include text-body-link;
 			transition: 0.3s;
 			text-decoration: none;
 			&:hover {
@@ -30,56 +30,133 @@
 	@include fonts.section-title;
 	text-align: center;
 	margin-bottom: 135px;
+	margin-top: 200px;
 }
 .family__room-style {
-	display: flex;
 	margin-bottom: 110px;
-	&-info {
-		width: 455px;
-		margin-left: 109px;
-		&-title {
-			@include fonts.info-title;
+	padding: 0 20px;
+	&-inner {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1460px;
+		@media (max-width: variables.$vp-medium-large) {
+			display: block;
 		}
-		&-text {
-			@include fonts.style-text;
-			margin: 73px 0 72px;
+		&-image {
+			width: 100%;
+			border-radius: 10px;
+			max-width: 841px;
+			object-fit: cover;
+			@media (max-width: variables.$vp-medium-large) {
+				margin-bottom: 40px;
+			}
 		}
-		&-area {
-			@include room-info;
-			&-number {
-				@include fonts.area;
+		&-info {
+			max-width: 455px;
+			@media (max-width: variables.$vp-medium-large) {
+				right: 0;
+			}
+			&-title {
+				@include fonts.info-title;
+				@media (max-width: variables.$vp-s-small) {
+					font-size: 25px;
+					max-width: 293px;
+					margin: 0 auto;
+				}
+			}
+			&-text {
+				@include fonts.style-text;
+				margin-top: 50px;
+				margin-bottom: 50px;
+				@media (max-width: variables.$vp-s-small) {
+					font-size: 16px;
+					max-width: 350px;
+				}
+			}
+			&-area {
+				@include room-info;
+				& img {
+					@media (max-width: variables.$vp-s-small) {
+						max-width: 48px;
+						max-height: 48px;
+					}
+				}
+				&-number {
+					@include fonts.area;
+					@media (max-width: variables.$vp-s-small) {
+						font-size: 20px;
+					}
+				}
 			}
 		}
 	}
 }
 .family__room-people {
 	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
 	margin-bottom: 140px;
+	padding: 0 20px;
+	@media (max-width: variables.$vp-medium-large) {
+		display: block;
+	}
 	&-info {
-		margin-left: 43px;
-		margin-right: 105px;
-
+		margin: auto;
+		margin-left: 0;
+		@media (max-width: variables.$vp-medium-large) {
+			margin-bottom: 60px;
+		}
 		&-text {
-			margin-top: 131px;
-			margin-bottom: 100px;
+			margin-top: 50px;
+			margin-bottom: 50px;
 		}
 		&-people {
 			padding: 20px 31px;
 		}
 	}
+	&-image {
+		width: 100%;
+		object-fit: cover;
+		max-width: 845px;
+	}
 }
 
 .family__room-cost {
-	margin-bottom: 80px;
+	margin-bottom: 143px;
+	padding: 0 20px;
 	display: flex;
 	justify-content: space-between;
-	width: 1190px;
+	max-width: 1212px;
+	@media (max-width: variables.$vp-medium-large) {
+		display: block;
+	}
+	&-image {
+		width: 100%;
+		object-fit: cover;
+		max-width: 773px;
+	}
 	&-info {
+		margin: auto;
+		margin-right: 0;
+		@media (max-width: variables.$vp-medium-large) {
+			margin-top: 40px;
+		}
 		&-day {
 			@include mixins.cost;
+			@media (max-width: variables.$vp-medium-large) {
+				font-size: 18px;
+			}
 		}
 		&-month {
-			margin: 89px 0;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			@media (max-width: variables.$vp-medium-large) {
+				font-size: 18px;
+			}
+			@media (max-width: variables.$vp-s-small) {
+				margin-top: 25px;
+				margin-bottom: 25px;
+			}
 		}
 		&-call {
 			align-items: center;
@@ -87,8 +164,28 @@
 			display: flex;
 			justify-content: space-between;
 			width: 337px;
+			@media (max-width: variables.$vp-medium-large) {
+				max-width: 300px;
+			}
+			@media (max-width: variables.$vp-s-small) {
+				max-width: 200px;
+			}
+			& img {
+				@media (max-width: variables.$vp-s-small) {
+					max-width: 48px;
+					max-height: 48px;
+				}
+			}
+
 			&-number {
 				@include fonts.area;
+				@media (max-width: variables.$vp-medium-large) {
+					font-size: 22px;
+					max-width: 200px;
+				}
+				@media (max-width: variables.$vp-medium-large) {
+					font-size: 18px;
+				}
 			}
 		}
 	}
@@ -96,21 +193,36 @@
 
 .family__room-slider {
 	margin-bottom: 154px;
+	padding: 0 20px;
 	display: flex;
 	justify-content: space-between;
 	&-left-arrow {
 		rotate: 180deg;
+		z-index: -1;
 		@include mixins.slider-button;
+		@media (max-width: variables.$vp-medium-large) {
+			display: none;
+		}
 	}
 	&-right-arrow {
 		@include mixins.slider-button;
+		@media (max-width: variables.$vp-medium-large) {
+			display: none;
+		}
+	}
+	&-ff {
+		width: 100%;
+		object-fit: cover;
+		max-width: 1214px;
 	}
 }
 
 .family__room-footer {
+	padding: 0 20px;
 	&::before {
 		content: '';
 		display: block;
+
 		height: 1px;
 		background: variables.$black-color;
 		width: 100%;
@@ -120,17 +232,31 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 118px;
+		@media (max-width: variables.$vp-s-small) {
+			flex-direction: column;
+		}
 	}
 	&-logo {
 		@include fonts.section-title;
+		@media (max-width: variables.$vp-m-small) {
+			font-size: 25px;
+			margin-bottom: 40px;
+		}
 	}
 	&-list {
 		text-align: start;
 		list-style: none;
+		@media (max-width: variables.$vp-m-small) {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
 		& a {
 			text-decoration: none;
 			@include fonts.footer-menu;
 			transition: 0.4s;
+			@media (max-width: variables.$vp-m-small) {
+				font-size: 16px;
+			}
 		}
 		& a:hover {
 			transition: 0.4s;
@@ -150,9 +276,22 @@
 			margin-bottom: 53px;
 			align-items: center;
 			text-align: center;
+			@media (max-width: variables.$vp-m-small) {
+				margin-bottom: 30px;
+			}
 			&-text {
 				@include fonts.footer-menu;
 				margin-left: 20px;
+				@media (max-width: variables.$vp-m-small) {
+					margin-left: 6px;
+					font-size: 16px;
+				}
+			}
+			&-image {
+				@media (max-width: variables.$vp-m-small) {
+					max-width: 32px;
+					max-height: 27px;
+				}
 			}
 		}
 		&-mail {
@@ -163,6 +302,16 @@
 			&-text {
 				@include fonts.footer-menu;
 				margin-left: 20px;
+				@media (max-width: variables.$vp-m-small) {
+					margin-left: 6px;
+					font-size: 16px;
+				}
+			}
+			&-image {
+				@media (max-width: variables.$vp-m-small) {
+					max-width: 25px;
+					max-height: 23px;
+				}
 			}
 		}
 	}

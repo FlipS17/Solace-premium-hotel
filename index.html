@@ -18,53 +18,80 @@
 						<li><a href="#" class="header__menu-link">Развлечения</a></li>
 						<li><a href="#" class="header__menu-link">Ресторан</a></li>
 					</ul>
+					<div class="header__burger">
+						<span class="header__burger-bar"></span>
+						<span class="header__burger-bar"></span>
+						<span class="header__burger-bar"></span>
+					</div>
+					<nav class="header__nav-mobile">
+						<ul class="header__menu-mobile">
+							<li class="header__menu-mobile-item">
+								<a class="header__menu-mobile-link" href="#"
+									>Главная страница</a
+								>
+							</li>
+							<li class="header__menu-mobile-item">
+								<a class="header__menu-mobile-link" href="#">Номера</a>
+							</li>
+							<li class="header__menu-mobile-item">
+								<a class="header__menu-mobile-link" href="#">Развлечения</a>
+							</li>
+							<li class="header__menu-mobile-item">
+								<a class="header__menu-mobile-link" href="#">Ресторан</a>
+							</li>
+						</ul>
+					</nav>
 				</nav>
 			</header>
 
-			<h2 class="family__room-subtitle">
-				Номер <span class="logo__strong">Family</span>
-			</h2>
-
 			<section class="family__room-style">
-				<img
-					class="family__room-style-image"
-					src="./src/assets/images/style-room5.jpg"
-					alt=""
-				/>
-				<div class="family__room-style-info">
-					<p class="family__room-style-info-title">
-						Авторский дизайн интерьера в скандинавском стиле
-					</p>
-					<p class="family__room-style-info-text">
-						Просторные апартаменты 34 м². Благодаря грамотному зонированию, в
-						апартаментах расположены гостиная и спальная зоны, а так же зона
-						кухни. Апартамент укомплектован современной бытовой техникой.
-					</p>
-					<div class="family__room-style-info-area">
-						<img
-							class="family__room-style-info-area-icon"
-							src="./src/assets/images/area.png"
-							alt=""
-						/>
-						<p class="family__room-style-info-area-number">34 м²</p>
+				<h2 class="family__room-subtitle">
+					Номер <span class="logo__strong">Family</span>
+				</h2>
+
+				<div class="family__room-style-inner">
+					<img
+						class="family__room-style-inner-image"
+						src="/src/assets/images/style-room5.jpg"
+						alt=""
+					/>
+					<div class="family__room-style-inner-info">
+						<p class="family__room-style-inner-info-title">
+							Авторский дизайн интерьера в скандинавском стиле
+						</p>
+						<p class="family__room-style-inner-info-text">
+							Просторные апартаменты 34 м². Благодаря грамотному зонированию, в
+							апартаментах расположены гостиная и спальная зоны, а так же зона
+							кухни. Апартамент укомплектован современной бытовой техникой.
+						</p>
+						<div class="family__room-style-inner-info-area">
+							<img
+								class="family__room-style-inner-info-area-icon"
+								src="./src/assets/images/area.png"
+								alt=""
+							/>
+							<p class="family__room-style-inner-info-area-number">34 м²</p>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<section class="family__room-people">
-				<div class="family__room-people-info family__room-style-info">
+				<div class="family__room-people-info family__room-style-inner-info">
 					<p
-						class="family__room-people-info-title family__room-style-info-title"
+						class="family__room-people-info-title family__room-style-inner-info-title"
 					>
 						Тишина и комфорт
 					</p>
-					<p class="family__room-people-info-text family__room-style-info-text">
+					<p
+						class="family__room-people-info-text family__room-style-inner-info-text"
+					>
 						В апартаментах установлены шторы блэк-аут, которые будут беречь ваш
 						сон, в апартаментах создана атмосфера уюта и спокойствия для
 						максимально комфортного отдыха.
 					</p>
 					<div
-						class="family__room-people-info-people family__room-style-info-area"
+						class="family__room-people-info-people family__room-style-inner-info-area"
 					>
 						<img
 							class="family__room-people-info-people-icon"
@@ -72,7 +99,7 @@
 							alt=""
 						/>
 						<p
-							class="family__room-people-info-people-number family__room-style-info-area-number"
+							class="family__room-people-info-people-number family__room-style-inner-info-area-number"
 						>
 							1-4 чел.
 						</p>
@@ -86,7 +113,11 @@
 			</section>
 
 			<section class="family__room-cost">
-				<img src="./src/assets/images/cost5.jpg" alt="" />
+				<img
+					class="family__room-cost-image"
+					src="/src/assets/images/cost5.jpg"
+					alt=""
+				/>
 				<div class="family__room-cost-info">
 					<p class="family__room-cost-info-day">6 800 ₽ за сутки</p>
 					<p class="family__room-cost-info-month family__room-cost-info-day">
@@ -103,7 +134,11 @@
 				<button class="family__room-slider-left-arrow">
 					<img src="./src/assets/images/btn-right.png" alt="" />
 				</button>
-				<img src="./src/assets/images/room-slider5.jpg" alt="" />
+				<img
+					class="family__room-slider-ff"
+					src="/src/assets/images/room-slider5.jpg"
+					alt=""
+				/>
 				<button class="family__room-slider-right-arrow">
 					<img src="./src/assets/images/btn-right.png" alt="" />
 				</button>
@@ -155,5 +190,6 @@
 			</section>
 		</div>
 		<script type="module" src="/src/js/main.js"></script>
+		<script src="/src/js/burger.js"></script>
 	</body>
 </html>

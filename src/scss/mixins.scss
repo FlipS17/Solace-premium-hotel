@@ -14,6 +14,10 @@
 	padding: 31px 47px;
 	align-items: center;
 	text-align: center;
+	@media (max-width: variables.$vp-s-small) {
+		padding: 25px 31px;
+		max-width: 200px;
+	}
 }
 @mixin cost {
 	@include fonts.area;
@@ -23,6 +27,10 @@
 	padding: 19px 46px;
 	align-items: center;
 	text-align: center;
+	@media (max-width: variables.$vp-s-small) {
+		padding: 19px 26px;
+		max-width: 250px;
+	}
 }
 
 @mixin slider-button {
