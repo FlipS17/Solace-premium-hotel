@@ -33,3 +33,6 @@
 @mixin footer-menu {
 	@include text-body(16px, 500, variables.$title-color);
 }
+@mixin mobile-menu-text {
+	@include text-body(18px, 400, variables.$white-color);
+}
