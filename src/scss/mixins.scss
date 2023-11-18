@@ -30,4 +30,7 @@
 	justify-content: space-between;
 	padding: 20px 23px 10px;
 	border-radius: 10px;
+	@media (max-width: 425px) {
+		padding: 13px 3px;
+	}
 }

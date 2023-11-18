@@ -2,6 +2,7 @@
 @use '/src/scss/variables.scss';
 @use '/src/scss/mixins.scss';
 .rooms {
+	padding: 0 20px;
 	&__title {
 		@include fonts.section-title;
 		margin-bottom: 60px;
@@ -17,13 +18,17 @@
 	}
 	&__card {
 		&-image {
+			width: 100%;
+			max-width: 467px;
 			margin-bottom: 17px;
+			@media (max-width: 425px) {
+				max-width: 300px;
+			}
 		}
 		&-description {
 			@include mixins.description-area;
 		}
-		&-info {
-		}
+
 		&-about {
 			width: 162px;
 			display: flex;
@@ -31,9 +36,18 @@
 			align-items: center;
 			text-align: center;
 			margin-bottom: 19px;
+			@media (max-width: 425px) {
+				justify-content: none;
+				max-width: 143px;
+				margin-bottom: 10px;
+			}
 		}
 		&-name-room {
 			@include fonts.room-card-name;
+			@media (max-width: 425px) {
+				justify-content: none;
+				margin-right: 12px;
+			}
 		}
 		&-cost {
 			@include fonts.room-card-text;
@@ -54,12 +68,19 @@
 			&-amount {
 				display: flex;
 				justify-content: space-between;
-				width: 169px;
+				max-width: 169px;
 				align-items: center;
 				margin-bottom: 24px;
+				@media (max-width: 425px) {
+					max-width: 140px;
+				}
 			}
 
 			&-image {
+				@media (max-width: 425px) {
+					max-width: 89px;
+					max-height: 18px;
+				}
 			}
 			&-mark {
 				@include fonts.room-card-text;
