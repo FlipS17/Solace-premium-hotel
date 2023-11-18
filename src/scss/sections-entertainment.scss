@@ -6,6 +6,9 @@
 	rotate: 180deg;
 }
 .entertainment {
+	max-width: 1460px;
+	margin: 0 auto;
+	padding: 0 20px;
 	&__title {
 		@include fonts.section-title;
 		text-align: center;
@@ -15,9 +18,17 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin: 0 auto;
 
+		&-image {
+			width: 100%;
+			object-fit: cover;
+		}
 		&-button {
 			@include mixins.slider-button;
+			@media (max-width: 1406px) {
+				display: none;
+			}
 		}
 		&-inner {
 			position: relative;
@@ -32,17 +43,58 @@
 			display: inline-block;
 			bottom: 4px;
 			right: 0;
+			@media (max-width: 768px) {
+				max-width: 328px;
+				max-height: 130px;
+				padding: 20px 58px;
+			}
+			@media (max-width: 425px) {
+				max-width: 242px;
+				max-height: 130px;
+				padding: 10px 36px;
+			}
+			@media (max-width: 320px) {
+				max-width: 175px;
+				max-height: 130px;
+				padding: 4px 9px;
+			}
 			&-about {
 				@include fonts.slider-info-text;
 				margin-bottom: 22px;
+				@media (max-width: 768px) {
+					font-size: 16px;
+					margin-bottom: 10px;
+				}
+				@media (max-width: 768px) {
+					font-size: 12px;
+					margin-bottom: 10px;
+				}
+				@media (max-width: 320px) {
+					font-size: 10px;
+					margin-bottom: 10px;
+				}
 			}
 			&-time {
+				max-width: 305px;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
+				@media (max-width: 768px) {
+					max-width: 136px;
+				}
+
+				&-clock {
+					@media (max-width: 768px) {
+						max-width: 28px;
+						max-height: 28px;
+					}
+				}
 			}
 			&-time-number {
 				@include fonts.slider-time-number;
+				@media (max-width: 768px) {
+					font-size: 18px;
+				}
 			}
 		}
 	}
