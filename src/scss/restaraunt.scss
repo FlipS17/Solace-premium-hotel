@@ -2,6 +2,7 @@
 @use 'variables.scss';
 
 .restaraunt {
+	padding: 0 20px;
 	&__subtitle {
 		@include fonts.section-title;
 		text-align: center;
@@ -11,6 +12,8 @@
 		position: relative;
 		overflow: hidden;
 		&-image {
+			width: 100%;
+			object-fit: cover;
 		}
 		&-info {
 			max-width: 488px;
@@ -20,18 +23,49 @@
 			position: absolute;
 			bottom: 4px;
 			left: 0;
+			@media (max-width: 768px) {
+				max-width: 242px;
+				padding: 21px 28px;
+			}
+			@media (max-width: 425px) {
+				max-width: 161px;
+				padding: 8px 10px;
+			}
 			&-about {
 				@include fonts.slider-info-text;
 				color: variables.$white-color;
 				margin-bottom: 24px;
+				@media (max-width: 768px) {
+					font-size: 14px;
+				}
+				@media (max-width: 425px) {
+					font-size: 12px;
+				}
 			}
 			&-time {
 				display: flex;
 				justify-content: space-between;
+				align-items: center;
 				max-width: 317px;
+				@media (max-width: 768px) {
+					max-width: 140px;
+				}
 				&-number {
 					@include fonts.slider-time-number;
 					color: variables.$white-color;
+					@media (max-width: 768px) {
+						font-size: 16px;
+					}
+				}
+				&-icon {
+					@media (max-width: 768px) {
+						max-width: 28px;
+						max-height: 28px;
+					}
+					@media (max-width: 425px) {
+						max-width: 20px;
+						max-height: 20px;
+					}
 				}
 			}
 		}
