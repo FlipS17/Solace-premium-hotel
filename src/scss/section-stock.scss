@@ -8,6 +8,7 @@
 	color: variables.$primary-color;
 }
 .stock {
+	padding: 0 20px;
 	&__title {
 		@include fonts.section-title;
 		text-align: center;
@@ -21,6 +22,10 @@
 		&-inner {
 			position: relative;
 		}
+		&-image {
+			width: 100%;
+			object-fit: cover;
+		}
 		&-info {
 			@include fonts.info-text;
 			max-width: 486px;
@@ -30,10 +35,28 @@
 			border-radius: 14px;
 			bottom: 4px;
 			text-align: left;
+			@media (max-width: 768px) {
+				max-width: 240px;
+				padding: 48px 17px;
+				font-size: 16px;
+			}
+			@media (max-width: 425px) {
+				max-width: 197px;
+				padding: 38px 9px;
+				font-size: 13px;
+			}
+			@media (max-width: 375px) {
+				max-width: 141px;
+				padding: 22px 9px;
+				font-size: 10px;
+			}
 		}
 		&-button {
 			border: none;
 			background-color: transparent;
+			@media (max-width: 1406px) {
+				display: none;
+			}
 		}
 	}
 }
